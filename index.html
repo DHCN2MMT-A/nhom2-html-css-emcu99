@@ -7,8 +7,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css” />
+
+
 </head>
 <body>
+        <header id="header">
+                <div id="logo">
+                    <img src="img/dung.PNG">
+                </div>
+                <div id="checkbox">
+                    <div class="header-right">
+                        <ul>
+
+                            <li><a href="#">LANGUAGE <i class="fa fa-anchor"></i></a>
+                                    <ul class="submenu">
+                                    <li><a href="">SPANISH</a></li>
+                                    <li><a href="">VIETNAMESE</a></li>
+                                    <li><a href="">CHINESE</a></li>
+                                    </ul>
+                            </li>
+                            <li><a href="#"><i class="fa fa-bars"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a href="#"><img src="img/so0.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="clear"></div>
+            <!--end header-->
+            <nav id="menu">
+                <div class="menu">
+                    <div class="menu-left">
+                        <ul>
+                            <li class="access"><a href=""  class="access"><span>Giới thiệu</span><i class="fa fa-angle-down"></i></a></li>
+                            <li><a href="">Lich sử<i class="fa fa-angle-down"></i></a>
+                                <ul class="submenu submenu2">
+                                    <li><a href="">A</a></li>
+                                    <li><a href="">B</a></li>
+                                    <li><a href="">C</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Văn hóa</a></li>
+                            <li><a href="">Ẩm thực</a></li>
+                            <li><a href="">Tin du lịch</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <!--end menu-left-->
+                    <div class="form">
+                        <form action="#">
+                            <ul>
+                                <li>
+                                    <input type="text" name="find"/> 
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </li>
+                                
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <section class="container">
+                    <div id="slide">
+                        <div id="slide1">
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                  <a href=""><img src="img/sli1.jpg" alt="slide1"></a>
+                                </div>
+            
+                                <div class="mySlides fade">
+                                 <a href=""><img src="img/sli2.jpg" alt="slide3"></a>
+                                  
+                                </div>
+            
+                                <div class="mySlides fade">
+                                  <a href=""><img src="img/sli3.jpg" alt="slide4"></a>
+                                  
+                                </div>
+                                <div class="mySlides fade">
+                                  <a href=""><img src="img/sli4.jpg" alt="slide5_2"></a>
+                                  
+                                </div>
+                            </div>
+            
+                            <div style="text-align:center" class="butt">
+                                <span class="dot" onclick="currentSlide(0)"></span> 
+                                <span class="dot" onclick="currentSlide(1)"></span> 
+                                <span class="dot" onclick="currentSlide(2)"></span> 
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>  
+                        </div>
+                    
+                    </div>
+                    <div class="cont">
+                        <div class="post"><ul>
+                                <li>
+                                    <img src="img/resort.jpg" />
+                                    <h3>Top Resort Nha Trang đẹp và chất lượng</h3>
+                                     
+                                </li>
+                                <li>
+                                    <img src="img/bun.jpg" />
+                                    <h3>Bún cá sứa Nha Trang</h3>
+                                     Bún cá sứa....
+                                </li>
+                                <li>
+                                    <img src="img/thap.jpg" />
+                                    <h3>Lễ hội tháp bà</h3>
+                                    Lế hội hàng năm...
+                                </li>	
+    
+            
+    
+    
+    
+                            </ul></div>
+                            <div class="sidebar">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/bq3EBy5LE2U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                                
+                        </div>
+                </section>
+               
+                <!--crip-->
+                    <script>
+                        
+                              var slideIndex;
+                             
+                              function showSlides() {
+                                  var i;
+                                  var slides = document.getElementsByClassName("mySlides");
+                                  var dots = document.getElementsByClassName("dot");
+                                  for (i = 0; i < slides.length; i++) {
+                                     slides[i].style.display = "none";  
+                                  }
+                                  for (i = 0; i < dots.length; i++) {
+                                      dots[i].className = dots[i].className.replace(" active", "");
+                                  }
+                                  slides[slideIndex].style.display = "block";  
+                                  dots[slideIndex].className += " active";
+                                  
+                                  slideIndex++;
+                                
+                                  if (slideIndex > slides.length - 1) {
+                                    slideIndex = 0
+                                  }    
+                                  
+                                  setTimeout(showSlides, 5000);
+                              }
+                              
+                              showSlides(slideIndex = 0);
+                              function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                              }
+                    </script>
     
 </body>
 </html>
